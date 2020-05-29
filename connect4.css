@@ -1,40 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(178, 226, 245);
+  /* background-color: rgb(119, 245, 234); */
+  background-image: linear-gradient(to bottom,
+      rgb(101, 101, 247),
+      skyblue,
+      rgb(175, 255, 231),
+      rgb(178, 226, 245));
+  background-repeat: no-repeat;
+  font-family: 'Poppins',
+    sans-serif;
+  text-align: center;
+}
+
+.header {
+  margin: 0 auto;
+  font-size: 1.5em;
+  -webkit-text-stroke: 0.1px #ffc934;
+  color: white;
+  text-shadow: black 4px 4px 3px;
+}
+
+span {
+  font-size: 1.5em;
+  -webkit-text-stroke: 0px white;
+  color: tomato;
+  text-shadow: black 3px 3px 3px;
+}
+
+.info {
+  display: flex;
+  margin: 0 auto 1.5em;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  letter-spacing: 1.3px;
+  text-shadow: black 2px 2px 1px;
+}
+
+.token {
+  font-size: 2.5em;
+  margin-left: 0.5em;
+}
+
+.btn {
+  border-radius: 5px;
+  padding: 1em 2.5em;
+  border: none;
+  background-color: #289ee7;
+  margin: 2em auto;
+  font-family: 'Poppins',
+    sans-serif;
+  cursor: pointer;
+  color: white;
+  letter-spacing: 1.3px;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
 /* game board table */
+#game {
+  width: 100%;
+  margin: auto;
+}
 
 #board {
-  border-collapse: collapse;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-collapse: separate;
+}
+
+#column-top,
+.row {
+  border-spacing: 10px 5px;
+}
+
+.row {
+  background-color: #ffe600;
+  /* border: solid 2px #ffc934; */
+  border: solid 2px #fdda78;
+  box-shadow: 7px 7px 28px 0px rgba(50, 50, 50, 0.4);
 }
 
 #board td {
   width: 50px;
   height: 50px;
-  border: solid 1px #666;
+  border: solid 1px #beb497;
+  position: relative;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: inset 7px 7px 20px 0px rgba(102, 102, 102, 0.3);
 }
 
 /* pieces are div within game table cells: draw as colored circles */
 
 .piece {
   /* TODO: make into circles */
-  margin: 5px;
-  width: 80%;
-  height: 80%;
+  margin: auto;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
+  position: absolute;
+  animation: falling 0.5s ease-in;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
 }
+
+
+@keyframes falling {
+  0% {
+    -webkit-transform: translateY(-400px);
+    transform: translateY(-400px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+
 
 /* TODO: make pieces red/blue,  depending on player 1/2 piece */
 ._1 {
-  background-color: tomato;
+  /* background-color: tomato; */
+  background: linear-gradient(to bottom, tomato 0%, #be3017 100%);
 }
 
 ._2 {
-  background-color: #289ee7;
+  /* background-color: #289ee7; */
+  background: linear-gradient(to bottom, #289ee7 0%, #0f669c 100%);
 }
 
 /* column-top is table row of clickable areas for each column */
 
 #column-top td {
   border: dashed 1px lightgray;
+  box-shadow: none;
+  opacity: 0.3;
 }
 
 #column-top td:hover {
   background-color: gold;
+  opacity: .8;
+  cursor: pointer;
 }
