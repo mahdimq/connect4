@@ -163,7 +163,7 @@ span {
   cursor: pointer;
 }
 
-@media (min-width: 560px) {
+@media (min-width: 860px) {
   #board td {
     width: 100px;
     height: 100px;
@@ -187,8 +187,8 @@ span {
 
 @media (min-width: 1050px) {
   #board td {
-    width: 125px;
-    height: 125px;
+    width: 120px;
+    height: 120px;
   }
 }
 
