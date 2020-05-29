@@ -23,7 +23,7 @@ body {
 
 .header {
   margin: 0 auto;
-  font-size: 1.5em;
+  font-size: 2.5em;
   -webkit-text-stroke: 0.1px #ffc934;
   color: white;
   text-shadow: black 4px 4px 3px;
@@ -44,6 +44,7 @@ span {
   color: white;
   letter-spacing: 1.3px;
   text-shadow: black 2px 2px 1px;
+  font-size: 1.25em;
 }
 
 .token {
@@ -53,7 +54,7 @@ span {
 
 .btn {
   border-radius: 5px;
-  padding: 1em 2.5em;
+  padding: 1em 2.25em;
   border: none;
   background-color: #289ee7;
   margin: 2em auto;
@@ -62,9 +63,11 @@ span {
   cursor: pointer;
   color: white;
   letter-spacing: 1.3px;
+  font-size: 1em;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
   opacity: 0.8;
 }
 
@@ -91,13 +94,14 @@ span {
   background-color: #ffe600;
   /* border: solid 2px #ffc934; */
   border: solid 2px #fdda78;
+  padding: 0.35em;
   box-shadow: 7px 7px 28px 0px rgba(50, 50, 50, 0.4);
+
 }
 
 #board td {
   width: 50px;
   height: 50px;
-  border: solid 1px #beb497;
   position: relative;
   border-radius: 50%;
   background-color: white;
@@ -155,6 +159,86 @@ span {
 
 #column-top td:hover {
   background-color: gold;
-  opacity: .8;
+  opacity: .7;
   cursor: pointer;
+}
+
+@media (min-width: 560px) {
+  #board td {
+    width: 100px;
+    height: 100px;
+  }
+
+  .header {
+    font-size: 1.5em;
+    margin-top: 1.5em;
+    font-size: 2.5em;
+  }
+
+  .info {
+    margin: 0 auto 1em;
+    font-size: 2em;
+  }
+
+  .btn {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 1050px) {
+  #board td {
+    width: 125px;
+    height: 125px;
+  }
+}
+
+@media (min-width: 1250px) {
+  #board td {
+    width: 150px;
+    height: 150px;
+  }
+
+  .header {
+    font-size: 1.5em;
+    margin-top: 1.5em;
+    font-size: 3em;
+  }
+
+  .info {
+    margin: 0 auto 1em;
+    font-size: 2.5em;
+  }
+
+  .btn {
+    font-size: 2.5em;
+  }
+}
+
+@media (min-width: 1650px) {
+  #board td {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (min-width: 2000px) {
+  #board td {
+    width: 250px;
+    height: 250px;
+  }
+
+  .header {
+    font-size: 1.5em;
+    margin-top: 1.5em;
+    font-size: 3.5em;
+  }
+
+  .info {
+    margin: 0 auto 1em;
+    font-size: 3em;
+  }
+
+  .btn {
+    font-size: 3em;
+  }
 }

@@ -98,7 +98,7 @@ const placeInTable = (y, x) => {
   piece.classList.add("piece")
   piece.classList.add(`_${currPlayer}`)
   const square = document.getElementById(`${y}-${x}`)
-  square.appendChild(piece)
+  square.append(piece)
 }
 
 /** endGame: announce game end */
